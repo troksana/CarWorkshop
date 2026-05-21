@@ -1,20 +1,25 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+---------------------------------------------------------------------------------------------------------------------------------
+# Car Rental & Fleet Management System (C++)
+-------------------------------------------
+A lightweight, object-oriented console application written in native C++ designed to simulate a car rental company management system. The project focuses on clean architecture, dynamic data management using the Standard Template Library (STL), and serialization/deserialization for persistent storage.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Key Features
+-------------------------------------------
+* **Fleet & Client Management:** Complete CRUD-like operations for handling vehicle fleets (`Car`), customer databases (`Client`), and live transactions (`Rental`).
+* **Business Logic Verification:** Built-in safeguards preventing illegal operations (e.g., renting an already leased vehicle, verifying driver's license status, and preventing overlapping rentals for a single client).
+* **Multi-Company Support:** Scalable system architecture allowing instantiation of multiple independent rental company objects (`CarRentalCompany`) concurrently.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+##  Architecture & Tech Stack
+-------------------------------------------
+* **Language:** C++11 / C++14 (Native)
+* **Paradigm:** Object-Oriented Programming (OOP) with strict encapsulation, modular class design, and custom constructors/destructors.
+* **Data Structures:** Heavy reliance on STL containers (`std::vector`) and data casting methodologies (`static_cast`).
+* **Time & Date Tracking:** Leveraging standard `time_t` and `tm` structures for precise timestamp management for leasing and returns.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Project Structure
+-------------------------------------------
+* `CarRentalCompany` - Core manager handling backend operations, data vectors, and business logic routing.
+* `Car` - Represents vehicle entities, technical specifications, and availability states.
+* `Client` - Stores customer credentials, contact info, and legal driving status.
+* `Rental` - Manages transactional states (`booked`, `canceled`, `leased`, `returned`) and time windows.
+---------------------------------------------------------------------------------------------------------------------------------
